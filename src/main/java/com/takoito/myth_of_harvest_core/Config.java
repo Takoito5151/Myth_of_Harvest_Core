@@ -12,7 +12,7 @@ public class Config {
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
 
-        isMH = configuration.getBoolean("ismyth_of_harvest","modpack",true,"is myth of harvest pack?");
+        isMH = configuration.getBoolean("ismyth_of_harvest","modpack",false,"is myth of harvest pack?");
         greeting = configuration.getString("greeting", Configuration.CATEGORY_GENERAL, greeting, "How shall I greet?");
 
         if (configuration.hasChanged()) {

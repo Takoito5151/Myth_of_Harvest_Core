@@ -1,5 +1,7 @@
 package com.takoito.myth_of_harvest_core;
 
+import com.takoito.myth_of_harvest_core.Items.HugeLunchBoxItem;
+import com.takoito.myth_of_harvest_core.Items.ModFoodBase;
 import com.takoito.myth_of_harvest_core.Items.ModItem;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +20,7 @@ public Item summary_metal;
 public Item summary_battle;
 public Item summary_freeze;
 public Item summary_buff;
+public Item huge_lunch_box;
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
@@ -50,6 +53,7 @@ public Item summary_buff;
         summary_buff = new ModItem()
             .setUnlocalizedName("summary_buff")
             .setTextureName("myth_of_harvest_core:summary_buff");
+        huge_lunch_box = new HugeLunchBoxItem();
         GameRegistry.registerItem(summary_nightmare,"summary_nightmare");
         GameRegistry.registerItem(summary_withered,"summary_withered");
         GameRegistry.registerItem(summary_nature,"summary_nature");
@@ -59,6 +63,7 @@ public Item summary_buff;
         GameRegistry.registerItem(summary_battle,"summary_battle");
         GameRegistry.registerItem(summary_freeze,"summary_freeze");
         GameRegistry.registerItem(summary_buff,"summary_buff");
+        GameRegistry.registerItem(huge_lunch_box,"huge_lunch_box");
         Myth_of_Harvest_Core.LOG.info(Config.greeting);
         Myth_of_Harvest_Core.LOG.info("I am Myth of Harvest Core at version " + Tags.VERSION);
     }
