@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class HugeLunchBoxItem extends ModFoodBase{
-    ItemStack lunchbox = GameRegistry.findItemStack("SpiceOfLife","SpiceOfLife.lunchbox",1);
+    ItemStack lunchbox = GameRegistry.findItemStack("SpiceOfLife","lunchbox",1);
     public HugeLunchBoxItem(){
         super(64,64,false);
         this.setUnlocalizedName("huge_lunch_box")

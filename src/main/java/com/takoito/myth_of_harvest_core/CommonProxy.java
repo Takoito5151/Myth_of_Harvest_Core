@@ -3,6 +3,7 @@ package com.takoito.myth_of_harvest_core;
 import com.takoito.myth_of_harvest_core.Items.HugeLunchBoxItem;
 import com.takoito.myth_of_harvest_core.Items.ModFoodBase;
 import com.takoito.myth_of_harvest_core.Items.ModItem;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -64,8 +65,18 @@ public Item huge_lunch_box;
         GameRegistry.registerItem(summary_freeze,"summary_freeze");
         GameRegistry.registerItem(summary_buff,"summary_buff");
         GameRegistry.registerItem(huge_lunch_box,"huge_lunch_box");
+
+        //aspects register(when thaumcraft loaded)
+        if (Loader.isModLoaded("Thaumcraft")){
+            AdditionalAspects.initAspects();
+        }
         Myth_of_Harvest_Core.LOG.info(Config.greeting);
         Myth_of_Harvest_Core.LOG.info("I am Myth of Harvest Core at version " + Tags.VERSION);
+        if (Loader.isModLoaded("SpiceOfLife")){
+            Myth_of_Harvest_Core.LOG.info("SoLLoaded.");
+        }else {
+            Myth_of_Harvest_Core.LOG.info("SoLNOTLoaded.");
+        }
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
