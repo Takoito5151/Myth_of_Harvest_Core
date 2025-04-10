@@ -5,6 +5,7 @@ import thaumcraft.api.aspects.Aspect;
 
 public class AdditionalAspects {
     public static Aspect FLORA;
+    public static Aspect JAPONICA;
 
     public static void initAspects(){
         FLORA = new Aspect(
