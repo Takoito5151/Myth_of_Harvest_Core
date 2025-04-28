@@ -1,0 +1,14 @@
+#Item
+item.summary_nightmare.name=Summary of Nightmare Book
+item.summary_withered.name=Summary of Withering
+item.summary_nature.name=Summary of Nature
+item.summary_ender.name=Summary of Ender Book
+item.summary_hunger.name=Summary of Hunger
+item.summary_metal.name=Summary of Metal Book
+item.summary_battle.name=Summary of Battle Techniques
+item.summary_freeze.name=Summary of Freezing Book
+item.summary_buff.name=Summary of Combat Manual
+
+#aspects
+tc.aspect.flora=flower
+tc.aspect.aster=stars
